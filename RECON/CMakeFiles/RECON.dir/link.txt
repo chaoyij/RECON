@@ -1,0 +1,1 @@
+/usr/bin/c++  -fopenmp   CMakeFiles/RECON.dir/main.cpp.o  -o RECON   -L/home/chaoyi/lib  -Wl,-rpath,/home/chaoyi/lib -lcnpy -lz -lcnpy -lz 

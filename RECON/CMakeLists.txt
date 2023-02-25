@@ -3,8 +3,8 @@ project(RECON)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(LINK_DIR /usr/local/lib/)
-set(INC_DIR /usr/local/include/)
+set(LINK_DIR /home/chaoyi/lib/)
+set(INC_DIR /home/chaoyi/include/)
 
 include_directories(${INC_DIR})
 link_directories(${LINK_DIR})

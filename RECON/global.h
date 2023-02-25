@@ -6,8 +6,10 @@
 #include "cnpy.h"
 
 
-const std::string DATAPATH ="/home/jiayi/disk/C-craig/dataset/";
-const std::string CSPATH ="/home/jiayi/disk/C-craig/inuse/";
+// const std::string DATAPATH ="/home/jiayi/disk/C-craig/dataset/";
+// const std::string CSPATH ="/home/jiayi/disk/C-craig/inuse/";
+const std::string DATAPATH ="/home/chaoyi/dataset/IMDB-Large-Class/";
+const std::string CSPATH ="/home/chaoyi/inuse/";
 const int tc = 16;
 dtype *X;
 labeltype *Y;
