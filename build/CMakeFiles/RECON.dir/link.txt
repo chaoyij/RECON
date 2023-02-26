@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -Xclang -fopenmp -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/RECON.dir/main.cpp.o -o RECON   -L/home/chaoyi/lib  -Wl,-rpath,/home/chaoyi/lib -lcnpy -lz -lcnpy -lz 

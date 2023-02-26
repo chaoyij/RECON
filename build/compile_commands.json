@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/chaoyi/Projects/RECON/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/home/chaoyi/include -Xclang -fopenmp -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -std=gnu++14 -o CMakeFiles/RECON.dir/main.cpp.o -c /Users/chaoyi/Projects/RECON/RECON/main.cpp",
+  "file": "/Users/chaoyi/Projects/RECON/RECON/main.cpp"
+}
+]

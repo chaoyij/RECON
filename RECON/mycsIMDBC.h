@@ -178,20 +178,21 @@ namespace IMDBC {
 
     void calIMDBCSim() {
         initSim(mixSim, mix, mixNum, mixDim, 1, mixDim - 1);
-        initSim(miSim, mi, miNum, miDim, 1);
-        initSim(titleSim, title, titleNum, titleDim, 1);
-        mixWeight = 1.0 / 6;
-        miWeight = 1.0 / 6;
-        titleWeight = 1.0 / 6;
+        // initSim(miSim, mi, miNum, miDim, 1);
+        // initSim(titleSim, title, titleNum, titleDim, 1);
+        mixWeight = 1.0 / 2;
+        // miWeight = 1.0 / 6;
+        // titleWeight = 1.0 / 6;
         personWeight = 1.0 / 2;
         idtype st_id = 0;
 
         for (idtype i = 0; i < miNum; i++, st_id += miNum) {
             #pragma omp parallel for schedule(static)
             for (idtype j = 0; j < miNum; j++) {
-                mvSim[st_id + j] = mixSim[st_id + j] * mixWeight
-                                   + miSim[st_id + j] * miWeight
-                                   + titleSim[st_id + j] * titleWeight;
+                // mvSim[st_id + j] = mixSim[st_id + j] * mixWeight
+                //                    + miSim[st_id + j] * miWeight
+                //                    + titleSim[st_id + j] * titleWeight;
+                mvSim[st_id + j] = mixSim[st_id + j] * mixWeight;
             }
         }
     }
@@ -381,7 +382,7 @@ namespace IMDBC {
                                                                   int linear = 0,
                                                                   int cateNum = 5,
                                                                   int saveWhere = 0,
-                                                                  int verbose = 1,
+                                                                  int verbose = 0,
                                                                   int assignSampleSize = 0
     ) {
         fullCS.clear();
@@ -407,10 +408,12 @@ namespace IMDBC {
 
             if (verbose)std::cout << "join N is " << jN << "\n";
             if (verbose)std::cout << "PROP is " << PROP << "\n";
-            idtype csSize = (idtype) (PROP * jN);
+            // idtype csSize = (idtype) (PROP * jN);
+            idtype csSize = (idtype) (PROP * titleNum);
 
             if (verbose)std::cout << "This cate should have [" << csSize << "]\n";
-            idtype sampleEachStep = 500;
+            // idtype sampleEachStep = 500;
+            idtype sampleEachStep = titleNum;
 
             en = system_clock::now();
             duration = duration_cast<microseconds>(en - st);
