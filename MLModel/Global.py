@@ -1,2 +1,2 @@
-DATAPATH = "/home/jiayi/disk/C-craig/dataset/"
-CSPATH = "/home/jiayi/disk/C-craig/"
+DATAPATH = "/home/chaoyi/dataset/IMDB-Class/"
+CSPATH = "/home/chaoyi/"

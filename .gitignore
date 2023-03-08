@@ -3,3 +3,6 @@
 *.iml
 MLModel/.DS_Store
 .DS_Store
+.json
+.cmake
+CMakeCache.txt
